@@ -614,43 +614,71 @@ p {
   }
 
   .english-name {
-    margin-bottom: 38px;
+    grid-area: english-name;
+    margin: 8px 0 0;
   }
 
   .hero h2 {
+    grid-area: headline;
+    margin-top: 44px;
     font-size: clamp(2.5rem, 13vw, 4rem);
   }
 
   .hero-intro {
+    grid-area: intro;
     margin-top: 24px;
   }
 
   .hero {
-    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) clamp(96px, 32vw, 124px);
+    grid-template-areas:
+      "eyebrow eyebrow"
+      "person-name portrait"
+      "english-name portrait"
+      "headline headline"
+      "intro intro"
+      "continue continue";
+    column-gap: 16px;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero .eyebrow {
+    grid-area: eyebrow;
+    margin-bottom: 14px;
+  }
+
+  .hero .person-name {
+    grid-area: person-name;
+    align-self: start;
+    margin-top: 0;
+  }
+
+  [data-page-language="en"] .hero .person-name {
+    font-size: clamp(1.55rem, 7.2vw, 2rem);
+  }
+
+  .hero .continue-link {
+    grid-area: continue;
   }
 
   .hero-portrait {
+    grid-area: portrait;
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 4;
+    justify-self: end;
   }
 
   .hero-portrait img {
-    object-position: 50% 10%;
+    object-position: 50% 8%;
   }
 
   .hero-portrait figcaption {
-    align-items: flex-end;
-    padding: 54px 20px 18px;
-  }
-
-  .hero-portrait .signature-rule {
-    width: 48px;
-    margin-bottom: 12px;
-  }
-
-  .hero-portrait .signature-name {
-    font-size: 0.9rem;
-    text-align: right;
+    display: none;
   }
 
   .section-label {

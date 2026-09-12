@@ -519,6 +519,79 @@ p {
   color: var(--muted);
 }
 
+.documentary-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.documentary-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.documentary-photo figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 3px;
+  padding: 68px 24px 20px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  line-height: 1.5;
+  background: linear-gradient(transparent, rgba(8, 8, 10, 0.86));
+}
+
+.documentary-photo figcaption strong {
+  color: #fff;
+  font-size: 16px;
+}
+
+.documentary-photo figcaption a {
+  width: fit-content;
+  margin-top: 5px;
+  color: #fff;
+  text-underline-offset: 4px;
+}
+
+.research-photo,
+.origin-photo {
+  margin-top: 64px;
+  aspect-ratio: 16 / 7;
+}
+
+.research-photo img {
+  object-position: 50% 43%;
+}
+
+.origin-photo img {
+  object-position: 50% 39%;
+}
+
+.leadership-gallery {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.72fr) minmax(0, 1.28fr);
+  gap: 18px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+.leadership-photo--portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.leadership-photo--wide {
+  aspect-ratio: 4 / 3;
+}
+
+.leadership-photo--portrait img {
+  object-position: 50% 38%;
+}
+
 .beyond-copy {
   max-width: 820px;
 }
@@ -772,6 +845,30 @@ p {
   .field-moment::before {
     top: 30px;
     bottom: 34px;
+  }
+
+  .research-photo,
+  .origin-photo {
+    margin-top: 42px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .leadership-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .leadership-photo--portrait {
+    aspect-ratio: 4 / 3;
+  }
+
+  .leadership-photo--portrait img {
+    object-position: 50% 34%;
+  }
+
+  .documentary-photo figcaption {
+    padding: 56px 18px 16px;
   }
 
   .email-link {

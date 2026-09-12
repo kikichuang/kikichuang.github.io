@@ -343,16 +343,6 @@ p {
   max-width: 860px;
 }
 
-.featured-work {
-  border-left: 2px solid var(--accent);
-  padding-left: clamp(18px, 2.4vw, 30px);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 7%, transparent), transparent 58%);
-}
-
-.featured-work h3 {
-  font-size: clamp(1.8rem, 3.25vw, 3rem);
-}
-
 .lead-copy,
 .section-heading > p,
 .beyond-copy > p,
